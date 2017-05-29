@@ -30,10 +30,14 @@ public class Vector3D {
 	}
 	
 	public static Vector3D fromSphericalCoords(double module, double theta, double phi) {
-		Vector3D v = new Vector3D(1, 1, 1);
-		v.setModule(module);
-		v.setTheta(theta);
-		v.setPhi(phi);
+//		Vector3D v = new Vector3D(1, 1, 1);
+//		v.setModule(module);
+//		v.setTheta(theta);
+//		v.setPhi(phi);
+		Vector3D v = new Vector3D();
+		v.x = module * Math.sin(phi) * Math.cos(theta);
+		v.y = module * Math.sin(phi) * Math.sin(theta);
+		v.z = module * Math.cos(phi);
 		return v;
 	}
 	

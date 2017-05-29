@@ -18,9 +18,12 @@ public class Vector2D {
 	}
 	
 	public static Vector2D fromPolarCoords(double module, double angle) {
-		Vector2D v = new Vector2D(1, 1);
-		v.setModule(module);
-		v.setAngle(angle);
+//		Vector2D v = new Vector2D(1, 1);
+//		v.setModule(module);
+//		v.setAngle(angle);
+		Vector2D v = new Vector2D();
+		v.x = module * Math.cos(angle);
+		v.y = module * Math.sin(angle);
 		return v;
 	}
 	

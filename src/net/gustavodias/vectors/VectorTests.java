@@ -146,6 +146,14 @@ public class VectorTests {
 		assertEquals(15.612, v.y, 1e-3);
 		assertEquals(5.461, v.z, 1e-3);
 		
+		v = new Vector3D(1, 1, 1);
+		v.setModule(21.1);
+		v.setTheta(Math.toRadians(50));
+		v.setPhi(Math.toRadians(75));
+		assertEquals(13.100, v.x, 1e-3);
+		assertEquals(15.612, v.y, 1e-3);
+		assertEquals(5.461, v.z, 1e-3);
+		
 		v = Vector3D.fromSphericalCoords(21.1, Math.toRadians(50), Math.toRadians(-75));
 		assertEquals(-13.100, v.x, 1e-3);
 		assertEquals(-15.612, v.y, 1e-3);
