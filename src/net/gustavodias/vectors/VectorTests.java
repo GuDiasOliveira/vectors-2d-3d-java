@@ -1,6 +1,6 @@
 package net.gustavodias.vectors;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -22,9 +22,6 @@ public class VectorTests {
 		assertEquals(57.271, v.getModule(), 1e-3);
 		assertEquals(Math.toRadians(-102.094), v.getAngle(), 1e-3);
 		
-//		v = new Vector2D(1, 1);
-//		v.setModule(23.1);
-//		v.setAngle(Math.toRadians(12.85));
 		v = Vector2D.fromPolarCoords(23.1, Math.toRadians(12.85));
 		assertEquals(22.521, v.x, 1e-3);
 		assertEquals(5.137, v.y, 1e-3);
